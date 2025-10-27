@@ -1,8 +1,11 @@
 import Phaser from 'phaser';
 import PreloadScene from './scenes/PreloadScene';
-import GameScene from './scenes/GameScene';
+import TitleScene from './scenes/TitleScene';
+import CharacterCreationScene from './scenes/CharacterCreationScene';
+import VillageScene from './scenes/VillageScene';
 import StatusScene from './scenes/StatusScene';
 import BattleScene from './scenes/BattleScene';
+// import GameScene from './scenes/GameScene'; // 기존 테스트 씬 (사용 안함)
 
 export const config = {
   type: Phaser.AUTO,
@@ -17,7 +20,7 @@ export const config = {
       debug: false
     }
   },
-  scene: [PreloadScene, GameScene, StatusScene, BattleScene],
+  scene: [PreloadScene, TitleScene, CharacterCreationScene, VillageScene, StatusScene, BattleScene],
   scale: {
     mode: Phaser.Scale.FIT,
     autoCenter: Phaser.Scale.CENTER_BOTH
